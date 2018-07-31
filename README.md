@@ -1,4 +1,4 @@
-# vsc-sort-react
+# vsc-sort-react README
 
 Press `⇧⌘P` and start typing `Sort`
 
