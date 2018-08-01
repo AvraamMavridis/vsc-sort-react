@@ -8,6 +8,8 @@ You should have 3 options.
 - Sort properties by the length of their name
 - Sort properties by the length of the line
 
+<img src="https://github.com/AvraamMavridis/vsc-sort-react/blob/master/images/sort_screenshot.png?raw=true" />
+
 
 ## Sort Alphabetically Example
 
