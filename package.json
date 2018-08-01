@@ -2,16 +2,23 @@
 	"name": "vsc-sort-react",
 	"displayName": "Sort React PropTypes",
 	"description": "Sort React PropTypes properties by name, name length or line length",
-	"version": "1.1.3",
+	"version": "1.1.4",
 	"publisher": "avraammavridis",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/AvraamMavridis/vsc-sort-react"
 	},
+	"bugs": "https://github.com/AvraamMavridis/vsc-sort-react/issues",
+	"license": "MIT",
 	"icon": "images/icon.png",
 	"engines": {
 		"vscode": "^1.25.0"
 	},
+	"galleryBanner": {
+		"color": "#3B3738",
+		"theme": "dark"
+	},
+	"keywords": [ "react", "react-native", "sort" ],
 	"categories": [ "Other" ],
 	"activationEvents": [ "onCommand:sortAlphabetically", "onCommand:sortByNameLength", "onCommand:sortByLineLength" ],
 	"main": "./extension",
@@ -32,8 +39,7 @@
 		]
 	},
 	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "node ./node_modules/vscode/bin/test"
+		"postinstall": "node ./node_modules/vscode/bin/install"
 	},
 	"devDependencies": {
 		"@babel/generator": "^7.0.0-beta.55",
