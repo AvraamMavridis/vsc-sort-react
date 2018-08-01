@@ -21,12 +21,18 @@ function getMaxRange() {
  */
 function transform(ast, sorter) {
   jp.apply(ast, '$..*[?(@.key && @.key.name==="propTypes")]', propTypes => {
-    propTypes.value.properties.sort(sorter);
+    propTypes
+      .value
+      .properties
+      .sort(sorter);
     return propTypes;
   });
 
   jp.apply(ast, '$..*[?(@.key && @.key.name==="defaultProps")]', propTypes => {
-    propTypes.value.properties.sort(sorter);
+    propTypes
+      .value
+      .properties
+      .sort(sorter);
     return propTypes;
   });
 }
@@ -45,21 +51,24 @@ function parseSource(source) {
   });
 }
 
+/**
+ * Generete source code from AST
+ *
+ * @param {object} ast
+ * @param {string} source
+ * @returns {string}
+ */
 function generateSource(ast, source) {
-  generate(
-    ast,
-    {
-      retainFunctionParens: false,
-      compact: false,
-      minified: false
-    },
-    source
-  );
+  return generate(ast, {
+    retainFunctionParens: false,
+    compact: false,
+    minified: false
+  }, source);
 }
 
 module.exports = {
   getMaxRange: getMaxRange,
   transform: transform,
   parseSource: parseSource,
-  generateSource: generateSource,
+  generateSource: generateSource
 };
