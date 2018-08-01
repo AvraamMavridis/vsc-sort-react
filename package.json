@@ -2,7 +2,7 @@
 	"name": "vsc-sort-react",
 	"displayName": "Sort React PropTypes",
 	"description": "Sort React PropTypes properties by name, name length or line length",
-	"version": "1.1.4",
+	"version": "1.2.0",
 	"publisher": "avraammavridis",
 	"repository": {
 		"type": "git",
@@ -18,9 +18,19 @@
 		"color": "#3B3738",
 		"theme": "dark"
 	},
-	"keywords": [ "react", "react-native", "sort" ],
-	"categories": [ "Other" ],
-	"activationEvents": [ "onCommand:sortAlphabetically", "onCommand:sortByNameLength", "onCommand:sortByLineLength" ],
+	"keywords": [
+		"react",
+		"react-native",
+		"sort"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:sortAlphabetically",
+		"onCommand:sortByNameLength",
+		"onCommand:sortByLineLength"
+	],
 	"main": "./extension",
 	"contributes": {
 		"commands": [
