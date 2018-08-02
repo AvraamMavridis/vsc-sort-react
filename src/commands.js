@@ -28,10 +28,9 @@ function register(name, sorter) {
         const output = generate(ast, text);
         editor.edit(convertion => convertion.replace(getMaxRange(), output.code))
       } catch (error) {
-        console.error(error);
         vscode
           .window
-          .showInformationMessage(JSON.stringify(error));
+          .showErrorMessage('There was an error', error.message || error.msg)
       }
     });
 }
