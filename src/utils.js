@@ -21,18 +21,12 @@ function getMaxRange() {
  */
 function transform(ast, sorter) {
   jp.apply(ast, '$..*[?(@.key && @.key.name==="propTypes")]', propTypes => {
-    propTypes
-      .value
-      .properties
-      .sort(sorter);
+    propTypes.value.properties.sort(sorter);
     return propTypes;
   });
 
   jp.apply(ast, '$..*[?(@.key && @.key.name==="defaultProps")]', propTypes => {
-    propTypes
-      .value
-      .properties
-      .sort(sorter);
+    propTypes.value.properties.sort(sorter);
     return propTypes;
   });
 }
@@ -47,7 +41,23 @@ function parseSource(source) {
   return parser.parse(source, {
     sourceType: 'module',
 
-    plugins: ['classProperties', 'exportDefaultFrom', 'jsx', 'flow']
+    plugins: [
+      'classProperties',
+      'exportDefaultFrom',
+      'jsx',
+      'typescript',
+      'doExpressions',
+      'objectRestSpread',
+      'decorators',
+      'classPrivateProperties',
+      'classPrivateMethods',
+      'exportDefaultFrom',
+      'asyncGenerators',
+      'functionBind',
+      'functionSent',
+      'dynamicImport',
+      'throwExpressions'
+    ]
   });
 }
 
@@ -59,11 +69,15 @@ function parseSource(source) {
  * @returns {string}
  */
 function generateSource(ast, source) {
-  return generate(ast, {
-    retainFunctionParens: false,
-    compact: false,
-    minified: false
-  }, source);
+  return generate(
+    ast,
+    {
+      retainFunctionParens: false,
+      compact: false,
+      minified: false
+    },
+    source
+  );
 }
 
 module.exports = {

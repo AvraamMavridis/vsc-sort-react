@@ -1,21 +1,13 @@
 const {registerSortAlphabetically, registerSortByNameLength, registerSortByLineLength} = require('./src/commands');
 
+const sortAlphabetically = registerSortAlphabetically();
+const sortByNameLength = registerSortByNameLength();
+const sortByLineLength = registerSortByLineLength();
+
 function activate(context) {
-    console.log('>>>>>>>>>>>>>>>>>');
-    const sortAlphabetically = registerSortAlphabetically();
     context
         .subscriptions
-        .push(sortAlphabetically);
-
-    const sortByNameLength = registerSortByNameLength();
-    context
-        .subscriptions
-        .push(sortByNameLength);
-
-    const sortByLineLength = registerSortByLineLength();
-    context
-        .subscriptions
-        .push(sortByLineLength);
+        .push(sortAlphabetically, sortByNameLength, sortByLineLength);
 }
 
 exports.activate = activate;
