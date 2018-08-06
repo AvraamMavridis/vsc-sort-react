@@ -18,9 +18,18 @@
 		"color": "#3B3738",
 		"theme": "dark"
 	},
-	"keywords": [ "react", "react-native", "sort" ],
-	"categories": [ "Other" ],
-	"activationEvents": [ "onLanguage:javascript", "onLanguage:typescript" ],
+	"keywords": [
+		"react",
+		"react-native",
+		"sort"
+	],
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:javascript",
+		"onLanguage:typescript"
+	],
 	"main": "./extension",
 	"contributes": {
 		"commands": [
@@ -39,7 +48,8 @@
 		]
 	},
 	"scripts": {
-		"postinstall": "node ./node_modules/vscode/bin/install"
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "NODE_ENV=test jest --config jest.config.js"
 	},
 	"dependencies": {
 		"@babel/generator": "^7.0.0-beta.55",
@@ -48,6 +58,7 @@
 		"@types/node": "^7.0.43",
 		"babylon": "^6.18.0",
 		"eslint": "^4.11.0",
+		"jest": "^23.4.2",
 		"jsonpath": "^1.0.0",
 		"typescript": "^2.6.1",
 		"vscode": "^1.1.18"
