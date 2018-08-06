@@ -4,6 +4,7 @@ node_js:
 cache:
   yarn: true
 install:
+  - npm install -g jest
   - npm install -g codecov
 script:
   - npm run test
