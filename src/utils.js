@@ -2,7 +2,8 @@ const vscode = require('vscode');
 const jp = require('jsonpath');
 const parser = require('@babel/parser');
 const generate = require('@babel/generator');
-const Range = vscode.Range;
+
+const { Range } = vscode;
 
 /**
  * Return the maximum possible Range
@@ -81,8 +82,8 @@ function generateSource(ast, source) {
 }
 
 module.exports = {
-  getMaxRange: getMaxRange,
-  transform: transform,
-  parseSource: parseSource,
-  generateSource: generateSource
+  getMaxRange,
+  transform,
+  parseSource,
+  generateSource
 };

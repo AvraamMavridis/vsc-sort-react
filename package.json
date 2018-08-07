@@ -2,7 +2,7 @@
 	"name": "vsc-sort-react",
 	"displayName": "Sort React PropTypes",
 	"description": "Sort React PropTypes properties by name, name length or line length",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"publisher": "avraammavridis",
 	"repository": {
 		"type": "git",
@@ -30,7 +30,7 @@
 		"onLanguage:javascript",
 		"onLanguage:typescript"
 	],
-	"main": "./extension",
+	"main": "./src/extension",
 	"contributes": {
 		"commands": [
 			{
@@ -49,20 +49,24 @@
 	},
 	"scripts": {
 		"postinstall": "node ./node_modules/vscode/bin/install",
+		"lint": "eslint ./src --fix",
 		"test": "NODE_ENV=test jest --config jest.config.js"
 	},
 	"dependencies": {
 		"@babel/generator": "^7.0.0-beta.55",
 		"@babel/parser": "^7.0.0-beta.55",
-		"@types/mocha": "^5.2.5",
-		"@types/node": "^10.5.6",
 		"babylon": "^6.18.0",
-		"eslint": "^5.3.0",
 		"jsonpath": "^1.0.0",
-		"typescript": "^3.0.1",
+		"typescript": "^2.6.1",
 		"vscode": "^1.1.18"
 	},
 	"devDependencies": {
-		"jest": "^23.4.2"
+		"@types/node": "^7.0.43",
+		"jest": "^23.4.2",
+		"babel-eslint": "^8.2.6",
+		"eslint": "^5.3.0",
+		"eslint-config-airbnb-base": "^13.0.0",
+		"eslint-config-avraam": "^1.0.0",
+		"eslint-plugin-import": "^2.13.0"
 	}
 }

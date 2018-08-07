@@ -1,8 +1,5 @@
 # vsc-sort-react README
 
-[![Build Status](https://travis-ci.org/AvraamMavridis/vsc-sort-react.svg?branch=master)](https://travis-ci.org/AvraamMavridis/vsc-sort-react)
-[![Greenkeeper badge](https://badges.greenkeeper.io/AvraamMavridis/vsc-sort-react.svg)](https://greenkeeper.io/)
-
 Press `⇧⌘P` and start typing `Sort`
 
 You should have 3 options.

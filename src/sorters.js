@@ -5,7 +5,7 @@
  * @param {Object} b
  * @returns {Boolean}
  */
-function sortAlphabetically(a, b){
+function sortAlphabetically(a, b) {
   return a.key.name > b.key.name;
 }
 
@@ -16,7 +16,7 @@ function sortAlphabetically(a, b){
  * @param {Object} b
  * @returns {Boolean}
  */
-function sortByNameLength(a, b){
+function sortByNameLength(a, b) {
   return a.key.name.length > b.key.name.length;
 }
 
@@ -27,7 +27,7 @@ function sortByNameLength(a, b){
  * @param {Object} b
  * @returns {Boolean}
  */
-function sortByLineLength(a, b){
+function sortByLineLength(a, b) {
   const alength = a.end - a.start;
   const blength = b.end - b.start;
   return alength > blength;
@@ -35,7 +35,7 @@ function sortByLineLength(a, b){
 
 
 module.exports = {
-  sortAlphabetically: sortAlphabetically,
-  sortByNameLength: sortByNameLength,
-  sortByLineLength: sortByLineLength,
-}
+  sortAlphabetically,
+  sortByNameLength,
+  sortByLineLength,
+};
