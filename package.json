@@ -58,7 +58,7 @@
 		"babylon": "^6.18.0",
 		"jsonpath": "^1.0.0",
 		"typescript": "^3.0.1",
-		"vscode": "^1.1.18"
+		"vscode": "^1.1.37"
 	},
 	"devDependencies": {
 		"@types/node": "^10.7.0",
