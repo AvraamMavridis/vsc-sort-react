@@ -53,7 +53,7 @@
 		"test": "NODE_ENV=test jest --config jest.config.js"
 	},
 	"dependencies": {
-		"@babel/generator": "^7.0.0-beta.55",
+		"@babel/generator": "^7.10.0",
 		"@babel/parser": "^7.0.0-beta.55",
 		"babylon": "^6.18.0",
 		"jsonpath": "^1.0.0",
